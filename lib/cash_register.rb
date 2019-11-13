@@ -14,10 +14,10 @@ class CashRegister
     @total += (price*quant)
     if quant > 1 
       quant.times do
-        @@items << title
+        @items << title
       end
     else
-      @@items << title
+      @items << title
     end  
   end
   
@@ -32,7 +32,7 @@ class CashRegister
   end
   
   def items
-    @@items
+    @items
   end
     
   
