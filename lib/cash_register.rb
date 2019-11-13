@@ -5,7 +5,9 @@ class CashRegister
     @total = discount
   end
   
-  
+  def discount
+    emp_discount = 20
+  end
   
   
 end
