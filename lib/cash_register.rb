@@ -1,9 +1,9 @@
 class CashRegister
-  attr_accessor :total, :discount
-  @@items = []
+  attr_accessor :total, :discount, :items
   def initialize(start = 0)
     @total = 0
     @discount = start
+    @items = []
   end
   
   def discount
@@ -14,10 +14,10 @@ class CashRegister
     @total += (price*quant)
     if quant > 1 
       quant.times do
-        @@items << title
+        @items << title
       end
     else
-      @@items << title
+      @items << title
     end  
   end
   
@@ -30,13 +30,4 @@ class CashRegister
       p "After the discount, the total comes to $#{@total.to_i}."
     end
   end
-  
-  def items
-    @@items
-  end
-    
-  
-  
-  
-  
 end
